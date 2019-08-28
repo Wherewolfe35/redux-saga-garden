@@ -15,7 +15,8 @@ const sagaMiddleWare = createSagaMiddleWare();
 
 function* watcherSaga() {
   yield takeEvery('OBTAIN_PLANTS', getSaga);
-  yield takeEvery('ADD_PLANT', postSaga)
+  yield takeEvery('ADD_PLANT', postSaga);
+  yield takeEvery('REMOVE_PLANT', deleteSaga);
 }
 
 function* getSaga(action) {
@@ -39,6 +40,16 @@ function* postSaga(action){
     })
   } catch(error){
     console.log('error in POST', error);
+  }
+}
+function* deleteSaga(action){
+  try{
+    yield axios.delete(`/api/plant/${action.payload}`);
+    yield put({
+      type: 'OBTAIN_PLANTS'
+    });
+  } catch (error) {
+    console.log('error in DELETE', error);
   }
 }
 
