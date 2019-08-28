@@ -4,7 +4,7 @@ class PlantItem extends Component {
   
   render() { 
     return ( 
-      <tr>
+      <tr key={this.props.plant.id}>
         <td>{this.props.plant.name}</td>
         <td><button>Delete</button></td>
       </tr>

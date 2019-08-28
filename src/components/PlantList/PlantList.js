@@ -21,13 +21,13 @@ class PlantList extends Component {
                 <table>
                     <thead>
                         <tr>
-                            <th>Name</th>
+                            <th>Plant Name</th>
                             <th>Remove</th>
                         </tr>
                     </thead>
                     <tbody>
                         {this.props.reduxState.plantList.map(plant =>
-                            <PlantItem plant={plant} />
+                            <PlantItem plant={plant} key={plant.id}/>
                         )}
                     </tbody>
                 </table>
