@@ -11,7 +11,7 @@ const StyledTableRow = withStyles(theme => ({
       backgroundColor: theme.palette.secondary,
     },
     '&:nth-of-type(even)': {
-      backgroundColor: theme.palette.primary,
+      backgroundColor: '#003500',
     },
   },
 }))(TableRow);
@@ -22,7 +22,8 @@ const StyledTableCell = withStyles(theme => ({
     color: theme.palette.common.white,
   },
   body: {
-    fontSize: 18,
+    fontSize: 16,
+    color: 'white'
   },
 }))(TableCell);
 

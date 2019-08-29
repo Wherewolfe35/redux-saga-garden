@@ -50,7 +50,7 @@ class NewPlantForm extends Component {
     render() {
         return (
             <Container>
-                <h3>Help grow our Garden!</h3>
+                <h2>Help grow our Garden!</h2>
                 <form onSubmit={this.addNewPlant}>
                     <TextField variant='outlined' margin='dense' label='Plant Name' 
                     value={this.state.newPlant.name} onChange={(event) => this.handleNameChange(event, 'name')} />

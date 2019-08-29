@@ -7,11 +7,12 @@ import { withStyles } from '@material-ui/core/styles';
 
 const StyledTableCell = withStyles(theme => ({
     head: {
-        backgroundColor: theme.palette.common.black,
+        backgroundColor: '#003500',
         color: theme.palette.common.white,
+        fontSize: 18,
     },
     body: {
-        fontSize: 14,
+        fontSize: 20,
     },
 }))(TableCell);
 
@@ -30,7 +31,7 @@ class PlantList extends Component {
     render() {
         return (
             <Container>
-                <h3>Plants</h3>
+                <h2>Plants</h2>
                 <Table>
                     <TableHead>
                         <TableRow>
